@@ -9,10 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.SplitPane;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
@@ -64,7 +61,38 @@ public class AlumnosController implements Initializable {
 
     @FXML
     void onEliminarAction(ActionEvent event) {
-        alumnos.remove(selectedAlumno.get());
+        if (selectedAlumno.get() != null) {
+            EliminarAlumnoAlert();
+        } else {
+            ErrorBorrarAlert();
+        }
+    }
+
+    // Alerta de que no se ha seleccionado ningún alumno al borrar
+    private void ErrorBorrarAlert() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error");
+        alert.setHeaderText("Selecciona un alumno para eliminar");
+        alert.showAndWait();
+    }
+
+    // Alerta de confirmación de borrado
+    private void EliminarAlumnoAlert() {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Eliminar Alumno");
+        alert.setHeaderText("Se va a eliminar al alumno '" + selectedAlumno.get().getNombre() + " " + selectedAlumno.get().getApellidos() +"'");
+        alert.setContentText("¿Estás seguro?");
+
+        ButtonType buttonTypeYes = new ButtonType("Aceptar");
+        ButtonType buttonTypeNo = new ButtonType("Cancelar");
+
+        alert.getButtonTypes().setAll(buttonTypeYes, buttonTypeNo);
+
+        alert.showAndWait().ifPresent(buttonType -> {
+            if (buttonType == buttonTypeYes) {
+                alumnos.remove(selectedAlumno.get());
+            }
+        });
     }
 
     @FXML
