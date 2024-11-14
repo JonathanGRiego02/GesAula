@@ -5,6 +5,7 @@ import dad.gesaula.ui.model.Grupo;
 import javafx.beans.property.*;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +24,10 @@ public class AlumnosController implements Initializable {
 
     // Model
     ListProperty<Alumno> alumnos = new SimpleListProperty<>(FXCollections.observableArrayList());
+
+    public ListProperty<Alumno> alumnosProperty() {
+        return alumnos;
+    }
 
     private final SelectedAlumnoController selectedAlumnoController = new SelectedAlumnoController();
 
@@ -143,5 +148,9 @@ public class AlumnosController implements Initializable {
         } else {
             alumnoBorderPane.setCenter(selectedAlumnoController.getRoot());
         }
+    }
+
+    public void clear() {
+        alumnos.clear();
     }
 }

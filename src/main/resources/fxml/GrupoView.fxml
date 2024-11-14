@@ -36,19 +36,19 @@
       <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="3">
          <children>
             <Slider fx:id="examenesSlider" minorTickCount="9" showTickMarks="true" snapToTicks="true" HBox.hgrow="ALWAYS" />
-            <Label fx:id="examenesLabel" text="Label" />
+            <Label fx:id="examenesLabel" text="0%" />
          </children>
       </HBox>
       <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="4">
          <children>
             <Slider fx:id="practicasSlider" minorTickCount="9" showTickMarks="true" snapToTicks="true" HBox.hgrow="ALWAYS" />
-            <Label fx:id="practicasLabel" text="Label" />
+            <Label fx:id="practicasLabel" text="0%" />
          </children>
       </HBox>
       <HBox spacing="5.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="5">
          <children>
             <Slider fx:id="actitudSlider" minorTickCount="9" showTickMarks="true" snapToTicks="true" HBox.hgrow="ALWAYS" />
-            <Label fx:id="actitudLabel" text="Label" />
+            <Label fx:id="actitudLabel" text="0%" />
          </children>
       </HBox>
    </children>

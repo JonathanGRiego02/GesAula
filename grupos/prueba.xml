@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<grupo denominacion="awdwd">
+    <alumnos>
+        <apellidos>Norris</apellidos>
+        <fechaNacimiento>1940-03-10</fechaNacimiento>
+        <nombre>Chuck</nombre>
+        <repite>true</repite>
+        <sexo>HOMBRE</sexo>
+    </alumnos>
+    <alumnos>
+        <apellidos>Van Damme</apellidos>
+        <fechaNacimiento>1960-10-18</fechaNacimiento>
+        <nombre>Jean-Claude</nombre>
+        <repite>false</repite>
+        <sexo>MUJER</sexo>
+    </alumnos>
+    <alumnos>
+        <apellidos>prueba de las narices</apellidos>
+        <fechaNacimiento>2020-11-19</fechaNacimiento>
+        <nombre>te odio</nombre>
+        <repite>true</repite>
+        <sexo>MUJER</sexo>
+    </alumnos>
+    <finCurso>2023-11-10</finCurso>
+    <iniCurso>2024-10-30</iniCurso>
+    <pesos actitud="42.5" examenes="50.0" practicas="67.5"/>
+</grupo>
